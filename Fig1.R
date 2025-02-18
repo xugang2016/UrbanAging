@@ -8,7 +8,7 @@ library(tidyverse)
 library(reshape2)
 
 
-setwd("D:/大四科研/衰减/World")
+
 
 mydata2 <- read.csv("0505输出属性.csv", sep=",") 
 mydata2$Color <- factor(mydata2$Color, levels = c("Japan/ South Korea","Europe","China", "United States","South America","India", "Africa","Others"))
@@ -51,11 +51,11 @@ reg.dis <- ggplot(mydata2, aes(x=reorder(Color,-Age),y=Age,fill=Color))+
         axis.title = element_text(size=8))+
   theme(legend.position ="none")+
   labs(subtitle = "c")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.15,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", #
+                                     size = 15,          
+                                     hjust = -0.15,         
+                                     vjust = -3,         
+                                     angle = 0,        
   ))+
   theme(panel.grid.major =element_blank(),
         panel.grid.minor = element_blank(),
@@ -102,11 +102,11 @@ temp.var <- ggplot(mydata2, aes(x=reorder(Color,-median),y=AgeDif,fill=Color))+
         panel.grid.minor = element_blank(),
         panel.background =element_rect(fill="white",color="black"))+
   labs(subtitle = "d")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.15,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif",
+                                     size = 15,          
+                                     hjust = -0.15,    
+                                     vjust = -3,        
+                                     angle = 0,       
   ))+
   scale_x_discrete(labels=c("Japan/ South Korea"="JS","Europe"="EU", "China"="CHN","United States"="USA","South America"="SA","India"="INA", "Africa"="AF","Others"="OS"))+
   scale_fill_manual(values=c("#4575b4", "#91bfdb", "#e0f3f8", "#fee090", 
