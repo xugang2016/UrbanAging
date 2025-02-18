@@ -3,8 +3,8 @@ library(dplyr)
 library(ggpmisc)
 library(ggpubr)
 
-setwd("D:/大四科研/衰减/World") #设置当前工作路径
-mydata4 <- read.csv("D:/大四科研/衰减/World/0507/513USA最终结果去异.csv", sep=",") #读取数据
+
+mydata4 <- read.csv("D:/大四科研/衰减/World/0507/513USA最终结果去异.csv", sep=",") 
 #mydata4<-na.omit(mydata)
 #mydata4$nshang<-as.numeric(mydata4$nshang)
 #mydata4 = na.omit(mydata4)
@@ -54,11 +54,11 @@ p1<-ggplot(mydata4,aes(x =AREAL, y =age))+
   theme(legend.title=element_text(size=6,family = "serif")) +
   #face = "italic"
   #labs(subtitle = "c.")+
-  #theme(plot.subtitle = element_text(family = "serif", #字体
-  #size = 15,          #字体大小
-  #hjust = -0.2,          #字体左右的位置
-  #vjust = -3,          #字体上下的高度
-  #angle = 0,          #字体倾斜的角度
+  #theme(plot.subtitle = element_text(family = "serif", 
+  #size = 15,          
+  #hjust = -0.2,         
+  #vjust = -3,         
+  #angle = 0,         
   #))+
   theme(axis.text.x = element_text(family = "serif", colour = "black",size = 7))+
   theme(axis.text.y = element_text(family = "serif",colour = "black", size = 7))+
@@ -74,11 +74,11 @@ p1<-ggplot(mydata4,aes(x =AREAL, y =age))+
   # margin = margin(1,0,1,0, "pt")),
   #strip.background = element_blank())+
   labs(subtitle = "a. Average age")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 10,          #字体大小
-                                     hjust = 0.1,          #字体左右的位置
-                                     vjust = -10,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 10,         
+                                     hjust = 0.1,          
+                                     vjust = -10,          
+                                     angle = 0,         
   ))+
   #plot_grid(p1 +
   #guides(color = "none") + 
@@ -86,14 +86,14 @@ p1<-ggplot(mydata4,aes(x =AREAL, y =age))+
   #guide_color, nrow = 2, rel_heights = c(10, 1))
 
 theme (legend.text=element_text(size =6,family = "serif", colour = "black"))+
-  guides(color=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                            byrow = F,#默认F，表示按照列填充
+  guides(color=guide_legend(ncol = 2,
+                            byrow = F,
                             reverse = F))+
-  guides(size=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                           byrow = F,#默认F，表示按照列填充
+  guides(size=guide_legend(ncol = 2,
+                           byrow = F,
                            reverse = F))
 ######################
-#mydata5 <- read.csv("D:/大四科研/衰减/World/0507/USA最终结果去异.csv", sep=",") #读取数据
+#mydata5 <- read.csv("D:/大四科研/衰减/World/0507/USA最终结果去异.csv", sep=",") 
 
 
 range(mydata4$population)
@@ -125,11 +125,11 @@ p2<-ggplot(mydata4,aes(x =REAL1, y =Ratio))+
   ylab("Age dependence Ratio(Worldpop)")+
   xlab("Age dependence Ratio(census data)")+
   labs(subtitle = "b.Age dependence ratio")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 10,          #字体大小
-                                     hjust = 0.1,          #字体左右的位置
-                                     vjust = -10,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 10,          
+                                     hjust = 0.1,          
+                                     vjust = -10,         
+                                     angle = 0,         
   ))+
   theme (axis.text=element_text(size =7),
          axis.title = element_text(size=7))+
@@ -139,11 +139,11 @@ p2<-ggplot(mydata4,aes(x =REAL1, y =Ratio))+
   theme(legend.title=element_text(size=6,family = "serif")) +
   #face = "italic"
   #labs(subtitle = "c.")+
-  #theme(plot.subtitle = element_text(family = "serif", #字体
-  #size = 15,          #字体大小
-  #hjust = -0.2,          #字体左右的位置
-  #vjust = -3,          #字体上下的高度
-  #angle = 0,          #字体倾斜的角度
+  #theme(plot.subtitle = element_text(family = "serif", 
+  #size = 15,         
+  #hjust = -0.2,          
+  #vjust = -3,        
+  #angle = 0,         
   #))+
   theme(axis.text.x = element_text(family = "serif", colour = "black",size = 7))+
   theme(axis.text.y = element_text(family = "serif",colour = "black", size = 7))+
@@ -165,11 +165,11 @@ p2<-ggplot(mydata4,aes(x =REAL1, y =Ratio))+
   #guide_color, nrow = 2, rel_heights = c(10, 1))
 theme(legend.key = element_rect(color = 'white'))+
 theme (legend.text=element_text(size =6,family = "serif", colour = "black"))+
-  guides(color=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                            byrow = F,#默认F，表示按照列填充
+  guides(color=guide_legend(ncol = 2,
+                            byrow = F,
                             reverse = F))+
-  guides(size=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                           byrow = F,#默认F，表示按照列填充
+  guides(size=guide_legend(ncol = 2,
+                           byrow = F,
                            reverse = F))+
   
 tiff(file="06251USA.tif", res = 600, width = 3600, height = 1800, compression = "lzw") 
