@@ -4,7 +4,7 @@ library(ggpmisc)
 library(ggpubr)
 library(stringr)
 library(tidyverse)
-setwd("D:/大四科研/衰减/World")
+
 mydata4 <- read.csv("0228country整合.csv", sep=",") 
 
 mydata4<-subset(mydata4,population>0)
@@ -42,8 +42,8 @@ p3 <- ggplot(mydata4,aes(x =gghed_gdp, y =medianage2020))+
                          unit = "pt")
   )+
   theme (legend.text=element_text(size =7, colour = "black"))+
-  guides(color=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                            byrow = F,#默认F，表示按照列填充
+  guides(color=guide_legend(ncol = 2,
+                            byrow = F,
                             reverse = F))+
   theme(legend.key = element_rect(color = 'white'))+
   guides(size=guide_legend(order = 1,ncol = 2),color=guide_legend(order=0))+
@@ -52,14 +52,14 @@ p3 <- ggplot(mydata4,aes(x =gghed_gdp, y =medianage2020))+
          legend.key.size=unit(4,'mm'),
          legend.text=element_text(size =10,colour = "black"))+
   theme (legend.text=element_text(size =7, colour = "black"))+
-  guides(color=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                            byrow = F,#默认F，表示按照列填充
+  guides(color=guide_legend(ncol = 2,
+                            byrow = F,
                             reverse = F))+
-  guides(size=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                           byrow = F,#默认F，表示按照列填充
+  guides(size=guide_legend(ncol = 2,
+                           byrow = F,
                            reverse = F))+
-  guides(size=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                           byrow = F,#默认F，表示按照列填充
+  guides(size=guide_legend(ncol = 2,
+                           byrow = F,
                            reverse = F))+
   labs (y="Median Age\n(country in 2020)",
         x="Government Health Expenditure as % GDP")+
