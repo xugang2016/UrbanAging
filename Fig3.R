@@ -7,7 +7,7 @@ library(stringr)
 library(tidyverse)
 
 
-setwd("D:/大四科研/衰减/World")
+
 
 mydata4 <- read.csv("0415quan输出属性.csv", sep=",") 
 mydata4 <- mydata4 
@@ -54,24 +54,24 @@ p1 <- ggplot(mydata4,aes(x =YoungRatio, y =OldRatio))+
   theme (legend.text=element_text(size =6, colour = "black"))+
   theme(
     legend.background = element_rect(
-      fill = "lightblue", # 填充色
-      colour = "white", # 框线色
-      size = 1.5 ) ) # 线条宽度
-  guides(color=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                            byrow = F,#默认F，表示按照列填充
+      fill = "lightblue", 
+      colour = "white", 
+      size = 1.5 ) ) 
+  guides(color=guide_legend(ncol = 2,
+                            byrow = F,
                             reverse = F))+
-  guides(size=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                           byrow = F,#默认F，表示按照列填充
+  guides(size=guide_legend(ncol = 2,
+                           byrow = F,
                            reverse = F))+
   theme (axis.text=element_text(size =7),
          axis.title = element_text(size=7))+
 
   labs(subtitle = "d")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.25,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 15,         
+                                     hjust = -0.25,          
+                                     vjust = -3,         
+                                     angle = 0,         
   ))+
     theme(legend.box.background = element_blank())+
     theme(
@@ -124,11 +124,11 @@ p2 <- ggplot(mydata4,aes(x =TwoYoung, y =YoungRatio))+
         panel.background =element_rect(fill="white",color="white"))+
   labs(subtitle = "b")+
     #theme(panel.border = element_rect(color = "black"))+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.25,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 15,          
+                                     hjust = -0.25,         
+                                     vjust = -3,         
+                                     angle = 0,         
   ))+
     scale_size_continuous(name = "Pop. (million)",
                           range = c(0.1, 4), 
@@ -190,11 +190,11 @@ p3 <- ggplot(mydata4,aes(x =TwoOld, y =OldRatio))+
          legend.key.size=unit(4,'mm'),
          legend.text=element_text(size =10,colour = "black"))+
   theme (legend.text=element_text(size =6, colour = "black"))+
-  guides(color=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                            byrow = F,#默认F，表示按照列填充
+  guides(color=guide_legend(ncol = 2,
+                            byrow = F,
                             reverse = F))+
-  guides(size=guide_legend(ncol = 2,#根据ncol或者nrow设置图例显示行数或列数（设置一个即可）
-                           byrow = F,#默认F，表示按照列填充
+  guides(size=guide_legend(ncol = 2,
+                           byrow = F,
                            reverse = F))+
   theme (axis.text=element_text(size =7),
          axis.title = element_text(size=7))+
@@ -202,11 +202,11 @@ p3 <- ggplot(mydata4,aes(x =TwoOld, y =OldRatio))+
         panel.grid.minor = element_blank(),
         panel.background =element_rect(fill="white",color="black"))+
   labs(subtitle = "c")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.25,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 15,          
+                                     hjust = -0.25,         
+                                     vjust = -3,          
+                                     angle = 0,         
   ))+
   theme(legend.title=element_text(size=10,family = "serif")) 
 
