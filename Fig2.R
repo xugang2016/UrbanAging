@@ -71,7 +71,7 @@ reg.dis <- ggplot(mydata2, aes(x=reorder(Color,-Ratio),y=Ratio,fill=Color))+
 
 temp.var <- ggplot(mydata2, aes(x=reorder(Color,-ChaRatio),y=ChaRatio,fill=Color))+
   geom_boxplot(size=0.2,outlier.size=0.2, outlier.shape = 1,alpha=0.8)+
-  stat_boxplot(geom = "errorbar", width=0.5,size =0.2)+ #添加轴须
+  stat_boxplot(geom = "errorbar", width=0.5,size =0.2)+ 
   #Africa
   annotate("segment", x = 4.62, xend=5.38,y = -0.10067,yend = -0.10067,
            size = 1,color="red")+
