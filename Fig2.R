@@ -6,7 +6,7 @@ library(stringr)
 library(tidyverse)
 library(reshape2)
 
-setwd("D:/大四科研/衰减/World")
+
 
 mydata2 <- read.csv("0409输出属性.csv", sep=",") 
 mydata2$Color <- factor(mydata2$Color, levels = c("Japan/South Korea","Europe","China", "United States","South America","India", "Africa","Others"))
@@ -44,11 +44,11 @@ reg.dis <- ggplot(mydata2, aes(x=reorder(Color,-Ratio),y=Ratio,fill=Color))+
   geom_hline(yintercept=0.4973, linetype=1, col = 'blue')+
   theme(axis.title.x = element_blank())+
   labs(subtitle = "b")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.25,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 15,          
+                                     hjust = -0.25,          
+                                     vjust = -3,         
+                                     angle = 0,         
   ))+
   labs (y="Age dependency ratio\n (2020)")+
   theme(axis.text=element_text(size =6), 
@@ -97,11 +97,11 @@ temp.var <- ggplot(mydata2, aes(x=reorder(Color,-ChaRatio),y=ChaRatio,fill=Color
   theme(axis.title.x = element_blank())+
   labs (y="Age dependency ratio\n (2000-2020)")+
   labs(subtitle = "c")+
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.25,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 15,          
+                                     hjust = -0.25,      
+                                     vjust = -3,        
+                                     angle = 0,        
   ))+
   theme(
     plot.margin = margin(t = 0, r = 0, b = 0, l = 5, 
@@ -161,11 +161,11 @@ p3 <- ggplot(mydata3,aes(x =Age, y =Ratio,size=population,color=Color,group=Colo
                                                 "#fc8d59", "#d73027", "#7f3b08"))+
   labs(subtitle = "d")+
   
-  theme(plot.subtitle = element_text(family = "serif", #字体
-                                     size = 15,          #字体大小
-                                     hjust = -0.25,          #字体左右的位置
-                                     vjust = -3,          #字体上下的高度
-                                     angle = 0,          #字体倾斜的角度
+  theme(plot.subtitle = element_text(family = "serif", 
+                                     size = 15,         
+                                     hjust = -0.25,          
+                                     vjust = -3,        
+                                     angle = 0,          
   ))+
   theme(
     plot.margin = margin(t = 0, r = 2, b = 0, l = 2, 
