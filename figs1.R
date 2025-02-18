@@ -4,7 +4,7 @@ library(ggpmisc)
 library(ggpubr)
 library(stringr)
 library(tidyverse)
-setwd("D:/大四科研/衰减/World")
+
 mydata1 <- read.csv("Agetimes.csv", sep=",") 
 
 long.term <- ggplot(mydata1,aes(yearid,Age))+
